@@ -1,1 +1,31 @@
-<p>add-usuario works!</p>
+<section class="container">
+    <form #fc=ngForm (ngSubmit) = "onsubmit(fc)">
+        <div class="form-group">
+            <label></label>
+            <input type="Nome" class="form-control" placeholder="Nome" [(ngModel)] = "usuario.nome" name="nome" required>
+            <small class="form-text text-muted"></small>
+        </div>
+
+        <div class="form-group">
+          <label></label>
+          <input type="email" class="form-control" placeholder="E-mail" [(ngModel)] = "usuario.email" name="email" required>
+          <small class="form-text text-muted"></small>
+        </div>
+
+        <div class="form-group">
+          <label></label>
+          <input type="password" class="form-control" placeholder="Senha" [(ngModel)] = "usuario.senha" name="senha" #senha="ngModel" minlength="6" required>
+          <small class="form-text text-danger font-weigth-bold" *ngIf="senha.invalid && senha.dirty">Senha muito curta</small>
+        </div>
+
+        <div class="form-group">
+          <label></label>
+          <input type="password" class="form-control" placeholder="confirmar senha" #conf="ngModel" name="conf" (ngModel)="conf" required>
+          <small class="form-text text-danger font-weigth-bold" *ngIf="senha.value != conf.value">Senhas diferentes</small>
+        </div>
+        
+           <button type="submit" class="btn btn-primary" [disabled]="fc.invalid || senha.value != conf.value">Salvar</button>
+           <button type="reset" class="btn btn-primary ml-2" routerLink="/">Cancelar</button> 
+        </form>
+</section>
+<app-
