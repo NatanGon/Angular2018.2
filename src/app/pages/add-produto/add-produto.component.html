@@ -1,0 +1,39 @@
+<section class="container">
+    <form #fc=ngForm (ngSubmit) = "onsubmit(fc)">
+        <div class="form-group">
+            <label>ID</label>
+            <input type="text" class="form-control" placeholder="ID" [(ngModel)] = "produto.id" name="id" required>
+            <small class="form-text text-muted"></small>
+        </div>
+            
+        <div class="form-group">
+            <label>Nome</label>
+            <input type="text" class="form-control" placeholder="Nome" [(ngModel)] = "produto.nome" name="nome" required>
+            <small class="form-text text-muted"></small>
+        </div>
+
+        <div class="form-group">
+          <label>Descrição</label>
+          <input type="text" class="form-control" placeholder="Descrição" [(ngModel)] = "produto.descrição" name="descrição" required>
+          <small class="form-text text-muted"></small>
+        </div>
+
+        <div class="form-group">
+          <label>Quantidade</label>
+          <input type="text" class="form-control" placeholder="Quantidade" [(ngModel)] = "produto.quantidade" name="quantidade" required>
+        </div>
+
+        <div class="form-group">
+          <label>Valor</label>
+          <input type="text" class="form-control" placeholder="Valor" [(ngModel)] = "produto.quantidade" name="valor"  required>
+        </div>
+        
+        <div class="form-group">
+                <label>Ativo</label>
+                <input type="text" class="form-control" placeholder="Ativo" [(ngModel)] = "produto.ativo" name="ativo"  required>
+        </div> 
+           <button type="submit" class="btn btn-primary" [disabled]="fc.invalid || senha.value != conf.value">Salvar</button>
+           <button type="reset" class="btn btn-primary ml-2" routerLink="/">Cancelar</button> 
+        </form>
+</section>
+<app-
