@@ -19,9 +19,23 @@
       "id": 3
     }
   ],
-  "produtos":[
+  "produtos": [
     {
-      "id":0
+      "id": 0
+    },
+    {
+      "ativo": true,
+      "nome": "lebusteibol",
+      "descricao": "ggnbf gmwduhdchuhui",
+      "quantidade": "50",
+      "id": 1
+    },
+    {
+      "ativo": true,
+      "nome": "Rapadura Feliz",
+      "descricao": "ajfa.kdbfgiJDBGilueg",
+      "quantidade": "50",
+      "id": 2
     }
   ]
 }

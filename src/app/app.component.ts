@@ -8,5 +8,4 @@ import { Usuario } from './model/usuario';
 })
 export class AppComponent {
   title = 'lojaAngular';
-  usuarios:Array<Usuario>;
 }

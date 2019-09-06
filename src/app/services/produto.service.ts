@@ -6,17 +6,15 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProdutoService {
-  produtos: Array<Produto> = [
 
-    ];
     protected db = environment.serverAPI;
     
     constructor(
       protected http: HttpClient
     ) { }
-    save(produto:Produto){
+    save(produtos:Produto){
   //this.usuarios.push(usuario);
-  return this.http.post(this.db + "produtos", produto);
+  return this.http.post(this.db + "produtos", produtos);
     }
     getALL(){
       return this.http.get(this.db + "produtos");

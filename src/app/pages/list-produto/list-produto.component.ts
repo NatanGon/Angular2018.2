@@ -6,10 +6,13 @@ import{ ProdutoService } from '../../services/produto.service';
   styleUrls: ['./list-produto.component.css']
 })
 export class ListProdutoComponent implements OnInit {
-
-  constructor() { }
+protected produtos:any;
+  constructor(
+    public produtoService: ProdutoService,
+  ) { }
 
   ngOnInit() {
+    this.produtos = this.produtoService.getALL()
   }
 
 }
