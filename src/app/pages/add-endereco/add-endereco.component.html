@@ -1,30 +1,29 @@
-<section class="container">
-    <form #fc=ngForm (ngSubmit) = "onsubmit(fc)">
         <div class="form-group">
-            <label>CEP</label>
-            <input type="text" class="form-control" placeholder="CEP" [(ngModel)] = "endereco.cep" name="cep" required>
-            <small class="form-text text-muted"></small>
-        </div>
-            
-        <div class="form-group">
-            <label>Logradouro</label>
-            <input type="text" class="form-control" placeholder="Logradouro" [(ngModel)] = "endereco.logradouro" name="logradouro" required>
-            <small class="form-text text-muted"></small>
-        </div>
-
-        <div class="form-group">
-          <label>Bairro</label>
-          <input type="text" class="form-control" placeholder="bairro" [(ngModel)] = "endereco.bairro" name="bairro" required>
-          <small class="form-text text-muted"></small>
-        </div>
-
-        <div class="form-group">
-          <label>Cidade</label>
-          <input type="text" class="form-control" placeholder="Cidade" [(ngModel)] = "endereco.cidade" name="cidade"  required>
+            <label for=""></label>
+            <input type="text" class="form-control" placeholder="CEP" [(ngModel)]="endereco.cep" name="cep" required minlength="7" required maxlength="9" #c="ngModel" (keyup)="buscaCEP($event)">
+            <small class="form-text text-danger"></small>
         </div>
         
         <div class="form-group">
-                <label>Estado</label>
-                <input type="text" class="form-control" placeholder="Estado" [(ngModel)] = "endereco.estado" name="estado"  required>
-        </div> 
-          
+            <label for=""></label>
+            <input type="text" class="form-control" placeholder="Endereço" [(ngModel)]="endereco.logradouro" name="logradouro" required>
+            <small class="form-text text-muted"></small>
+        </div>
+        
+        <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" placeholder="Bairro" [(ngModel)]="endereco.bairro" name="bairro" required>
+            <small class="form-text text-muted"></small>
+        </div>
+        
+        <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" placeholder="Cidade" [(ngModel)]="endereco.localidade" name="localidade" required>
+            <small class="form-text text-muted"></small>
+        </div>
+        
+        <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" placeholder="Estado" [(ngModel)]="endereco.uf" name="uf" required>
+            <small class="form-text text-muted"></small>
+        </div>

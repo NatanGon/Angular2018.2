@@ -23,9 +23,13 @@
           <input type="password" class="form-control" placeholder="confirmar senha" #conf="ngModel" name="conf" (ngModel)="conf" required>
           <small class="form-text text-danger font-weigth-bold" *ngIf="senha.value != conf.value">Senhas diferentes</small>
         </div>
-        
+
+          <app-add-endereco [endereco]=endereco></app-add-endereco>
+
+        <div class="form-group text-right">
            <button type="submit" class="btn btn-primary" [disabled]="fc.invalid || senha.value != conf.value">Salvar</button>
            <button type="reset" class="btn btn-primary ml-2" routerLink="/">Cancelar</button> 
+        </div>
         </form>
 </section>
 <app-list-usuario></app-list-usuario>

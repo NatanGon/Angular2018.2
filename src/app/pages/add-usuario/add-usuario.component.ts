@@ -10,6 +10,7 @@ import {Router} from "@angular/router"
 export class AddUsuarioComponent implements OnInit {
 
   usuario:Usuario = new Usuario;
+  endereco = this.usuario.endereco
   
   constructor(
   public usuarioService: UsuarioService,
@@ -21,6 +22,7 @@ export class AddUsuarioComponent implements OnInit {
 
   onsubmit(form){
     console.log(form);
+  
     this.usuarioService.save(this.usuario).subscribe(
       res=>{
         console.log(res);

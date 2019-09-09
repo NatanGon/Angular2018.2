@@ -28,7 +28,6 @@ export class AddProdutoComponent implements OnInit {
       }
     );
     this.produto = new Produto;
-    console.log(this.produto, this.produtoService.produtos);
     form.reset();
     this.router.navigate(["/"]);
   }
